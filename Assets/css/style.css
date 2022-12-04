@@ -1,3 +1,10 @@
+:root {
+    --background-color:#7c7c7c;
+    --text-color:beige;
+}
+
+
+
 * {
     Box-sizing:border-box;
     padding:0;
@@ -6,14 +13,16 @@
 }
 
 body {
-    background-color:#A9A9A9;
+    background-color:var(--background-color)
 }
 
 .header {
     padding: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: navy;
-    color: beige;
+    background-color: rgb(31, 53, 31);
+    color: var(--text-color);
+    display:flex;
+    justify-content: space-between;
     
 }
 
@@ -21,12 +30,10 @@ body {
     display: inline-block;
     font-size: 48px;
     margin-left:7px;
-    position: relative;
-    right: 450px;
 }
 
 .header h1 .name {
-    color: beige;
+    color: var(--text-color);
 }
 
 .header div {
@@ -43,7 +50,7 @@ body {
 
 
 .header div ul li {
-    color:beige;
+    color:var(--text-color);
     display: inline-block;
     margin-left: 25px;
 }
@@ -55,7 +62,7 @@ body {
 
 
 a {
-    color: beige;
+    color: var(--text-color);
     text-decoration: none;
 }
 
@@ -63,28 +70,33 @@ a {
     height: 450px;
     width: 100%;
     margin-bottom: 25px;
-    Background-image: url('../Images/Screenshot\ 2022-11-25\ 211302.png');
-    background-size: 100%;
+    background-image: url('../Images/IMG_2443.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; 
+    border-bottom-left-radius:14px;
+    border-bottom-right-radius: 14px;
 }
 
+.content {
+    display:flex;
+}
 
 .About-me{
     margin-bottom: 10px;
     padding: 10px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #A9A9A9;
+    background-color: var(--background-color);
     color: black;
 }
 
 .About-me h2{
     Font-size:50px;
     position:relative;
-    color:beige;
+    color:var(--text-color);
     text-decoration:underline;
-    text-decoration-color:beige;
+    text-decoration-color:var(--text-color);
 }
 
 .About-me p {
@@ -92,32 +104,38 @@ a {
     font-size:20px;
     margin-top:20px;
     display:flex;
+    justify-content: center;
 }
+
+ .content2 {
+    display:flex;
+} 
 
 .work {
     margin-bottom: 10px;
     padding: 10px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #A9A9A9;
-    color: black;
+    background-color:var(--background-color);
 }
 
 .work h2{
     Font-size:45px;
-    position:relative;
-    color:beige;
+    color:var(--text-color);
     text-decoration:underline;
-    text-decoration-color:beige;
+    text-decoration-color:var(--text-color);
 }
+
+ .work ul{
+    display: flex;
+    justify-content:center;
+    list-style: none;
+    flex-wrap: wrap;
+
+} 
 
 .firstproject {
-    position: relative;
-    right:750px;
-    
 }
-
-
 
 .firstproject img{
     height:300px;
@@ -139,55 +157,99 @@ transition: 1s ease;
     top:56px;
 }
 
+.secondproject{
+    margin: 59px
+}
+
+.secondproject img{
+    height:200px;
+    width:175px;
+    border-radius:10px;
+    transition:1s ease;
+}
+
+.secondproject img:hover{ 
+    -webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.5);
+transition: 1s ease;
+}
+    
+.secondprojecttext {
+    position: relative;
+    font-size:22px;
+    top:37px;
+}
+
+.thirdproject{
+    margin: 59px
+}
+
+.thirdproject img{
+    height:200px;
+    width:175px;
+    border-radius:10px;
+    transition:1s ease;
+}
+
+.thirdproject img:hover{ 
+    -webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.5);
+transition: 1s ease;
+}
+    
+.thirdprojecttext {
+    position: relative;
+    font-size:22px;
+    top:37px;
+}
+ 
+ 
+
 
 .contact-me {
-    margin-bottom: 10px;
-    padding: 100px;
-    height: 300px;
+    margin: 115px;
+    /* height: 300px; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #A9A9A9;
-    color: black;
-    
+    background-color: var(--background-color);
 }
 
 .contact-me h3{
     Font-size:40px;
-    position:relative;
     color:maroon;
     text-decoration:underline;
     text-decoration-color:maroon;
 }
 
+.contact-me ul{
+    display:flex;
+    justify-content: space-evenly;
+}
+
 .contact-me li{
     font-size:25px;
     display:inline;
-    flex-direction:row;
-    flex-wrap:wrap;
 }
 
 .contact-me li :hover{
     text-decoration: underline;
 }
 
-#email1{
- float:left;
- position: relative;
- left:120px;
- top:50px;
- flex-wrap:wrap;
+
+@media only screen and (max-width:1000px){
+   .header{ flex-direction:column;}
 }
 
-#Github{
-    position: relative;
-    top: 50px;
-    right: 130px;
-    float: none;
-    flex-wrap: wrap;
-}
+@media only screen and (min-width:1000px){
+    .content{ flex-direction:column;}
+ }
 
-#Linkedin{
-    position: relative;
-    top: 50px;
-    left: 275px;
-}
 
+ @media only screen and (min-width:1000px){
+    .content2{ flex-direction:column;}
+ }
+
+ @media only screen and (min-width:1000px){
+    .contact-me{ flex-direction:column;}
+ }
