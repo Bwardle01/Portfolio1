@@ -1,2 +1,2 @@
 # Portfolio1
-This project is the first addition to my porfolio. This is a personal portfolio of all my work. This will have ways to contact me, see my resume, and see all my work that I have made. Currently I dont have any projects completed yet but this will be updated frequently with future work! 
+This project is the first addition to my porfolio. This is a personal portfolio of all my work. This will have ways to contact me, see my resume, and see all my work that I have made. Currently I dont have any projects completed yet but this will be updated frequently with future work! This will be updated with time by adding more projects, updating and creating a real About me section and updating my resume.
